@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTLipa — Experience the Difference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="sitebar">
+  <div class="brand">GT<span>Lipa</span></div>
+  <div class="sitebar-right">
+    <span class="mono"><i class="status-dot"></i>Interactive experience</span>
+    <span class="mono">Dar es Salaam · TZ</span>
+  </div>
+</header>
+
+<!-- INTRO -->
+
+<section class="intro">
+  <div class="intro-main">
+    <div class="kicker mono">A business experience / 001</div>
+
+    <h1>
+      A lot can<br>
+      happen in<br>
+      <em>a moment.</em>
+    </h1>
+
+    <p class="intro-copy">
+      Every business is a series of moments.
+      Some keep things moving. Others get in the way.
+      Step inside and experience the difference.
+    </p>
+  </div>
+
+  <div class="intro-foot">
+    <span class="mono">Your experience starts here</span>
+    <button class="text-btn mono" id="enterExperience">
+      Enter the experience ↓
+    </button>
+  </div>
+</section>
+
+<!-- ROLE SELECTION -->
+
+<section class="section role-section" id="roleSection">
+  <div class="section-head">
+    <div class="phase-label mono">
+      <span class="phase-index">00 /</span>
+      <span>Choose your perspective</span>
+    </div>
+
+    <div class="phase-track">
+      <span class="track-segment active"></span>
+      <span class="track-segment"></span>
+      <span class="track-segment"></span>
+    </div>
+  </div>
+
+  <div class="role-layout">
+
+    <div>
+      <div class="mono muted">Before we begin</div>
+
+      <h2 class="phase-title" style="margin-top:24px">
+        Where do<br>
+        you stand?
+      </h2>
+
+      <p class="section-intro">
+        Every transaction has two sides. Choose one to step into
+        the story.
+      </p>
+    </div>
+
+    <div class="role-options">
+
+      <button class="role-card" id="chooseVendor">
+        <div class="role-top mono">
+          <span>Perspective 01</span>
+          <span>↗</span>
+        </div>
+
+        <h3>The vendor</h3>
+
+        <p>
+          You have a business to run. Orders to complete.
+          Customers to serve. Payments to receive.
+        </p>
+      </button>
+
+      <button class="role-card" id="chooseCustomer">
+        <div class="role-top mono">
+          <span>Perspective 02</span>
+          <span>↗</span>
+        </div>
+
+        <h3>The customer</h3>
+
+        <p>
+          You know what you want. You are ready to pay.
+          You want to get on with your day.
+        </p>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 01: THE FRICTION -->
+
+<section class="section dark" id="phaseOne">
+
+  <div class="section-head">
+    <div class="phase-label">
+      <span class="mono phase-index">01 / 03</span>
+      <span class="mono">The friction</span>
+    </div>
+
+    <div class="phase-track">
+      <span class="track-segment active"></span>
+      <span class="track-segment"></span>
+      <span class="track-segment"></span>
+    </div>
+  </div>
+
+  <div class="business-layout">
+
+    <div class="business-copy">
+
+      <span class="mono" id="roleLabel">VENDOR EXPERIENCE</span>
+
+      <h2 class="phase-title">
+        Small delays become big interruptions.
+      </h2>
+
+      <p class="section-intro" id="phaseOneDescription">
+        Your shop is open. A customer is ready to pay.
+        Complete the sale while the rest of the shop keeps moving.
+      </p>
+
+      <div class="task-list">
+
+        <div class="task-row" id="task1">
+          <span class="task-num">01</span>
+          <span>Receive the order</span>
+        </div>
+
+        <div class="task-row" id="task2">
+          <span class="task-num">02</span>
+          <span>Complete the payment</span>
+        </div>
+
+        <div class="task-row" id="task3">
+          <span class="task-num">03</span>
+          <span>Keep the business moving</span>
+        </div>
+
+      </div>
+
+      <div class="progress-row">
+        <span id="phaseOneStatus">Ready to begin</span>
+        <span class="mono" id="phaseOneProgress">0 / 3 COMPLETE</span>
+      </div>
+
+    </div>
+
+    <div class="shop" id="shop">
+
+      <div class="shop-top">
+        <div>
+          <div class="mono muted">BUSINESS SIMULATION</div>
+          <div class="shop-name">Corner Store</div>
+        </div>
+
+        <span class="mono muted">OPEN</span>
+      </div>
+
+      <div class="shop-body">
+
+        <div class="order-meta">
+          <span class="mono">
+            ORDER <span id="orderNumber">#001</span>
+          </span>
+
+          <span class="mono order-number" id="orderStatus">
+            IN PROGRESS
+          </span>
+        </div>
+
+        <div class="customer-line">
+          <div class="avatar" id="customerAvatar">JM</div>
+          <span id="customerName">Customer #001</span>
+        </div>
+
+        <div class="order-product">
+          <div class="product-art" id="productArt">▦</div>
+
+          <div class="product-info">
+            <h3 id="productName">Everyday essentials</h3>
+            <p id="productDescription">
+              A customer's regular shopping order
+            </p>
+          </div>
+        </div>
+
+        <div class="order-total">
+          <span class="mono muted">ORDER TOTAL</span>
+          <strong id="orderAmount">TZS 25,000</strong>
+        </div>
+
+        <div class="shop-action">
+          <button class="primary-btn" id="startPayment">
+            <span id="actionLabel">Start transaction</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <!-- CASH-HANDLING TASK -->
+
+        <div class="cash-task hidden" id="cashTask">
+
+          <div class="cash-task-head">
+            <span class="mono">CASH TRANSACTION</span>
+            <span class="mono">TASK 02</span>
+          </div>
+
+          <div class="cash-breakdown">
+
+            <div>
+              <span>Cash received</span>
+              <strong id="cashReceived">TZS 30,000</strong>
+            </div>
+
+            <div>
+              <span>Order total</span>
+              <strong>TZS 25,000</strong>
+            </div>
+
+            <div class="change-row">
+              <span>Change due</span>
+              <strong id="changeDue">TZS 5,000</strong>
+            </div>
+
+          </div>
+
+          <button class="primary-btn" id="completeChange">
+            <span>Prepare change</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+
+        </div>
+
+        <!-- GROWING CUSTOMER QUEUE -->
+
+        <div class="shop-queue hidden" id="shopQueue">
+
+          <div class="shop-queue-head">
+            <span class="mono">CUSTOMER QUEUE</span>
+            <span class="waiting-count" id="waitingCount">
+              0 waiting
+            </span>
+          </div>
+
+          <div class="shop-queue-list">
+
+            <div class="shop-queue-order current" id="queueOrder1">
+
+              <div class="shop-queue-order-info">
+                <span class="mono">ORDER #001</span>
+                <strong>Everyday essentials</strong>
+                <p>First sale still in progress</p>
+              </div>
+
+              <div class="shop-queue-order-side">
+                <strong>TZS 25,000</strong>
+                <span>In progress</span>
+              </div>
+
+            </div>
+
+            <div class="shop-queue-order waiting hidden" id="queueOrder2">
+
+              <div class="shop-queue-order-info">
+                <span class="mono">ORDER #002</span>
+                <strong>Household supplies</strong>
+                <p>Another customer is ready</p>
+              </div>
+
+              <div class="shop-queue-order-side">
+                <strong>TZS 18,000</strong>
+                <span>Waiting</span>
+              </div>
+
+            </div>
+
+            <div class="shop-queue-order waiting hidden" id="queueOrder3">
+
+              <div class="shop-queue-order-info">
+                <span class="mono">ORDER #003</span>
+                <strong>Personal care</strong>
+                <p>Another order joins the queue</p>
+              </div>
+
+              <div class="shop-queue-order-side">
+                <strong>TZS 12,000</strong>
+                <span>Waiting</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="queue-message" id="queueMessage" aria-live="polite">
+            The first sale is still unfinished. Other customers are ready to be served.
+          </p>
+
+          <button class="secondary-btn" id="nextCustomer">
+            <span>Continue</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="queue-strip" id="queueStrip">
+
+        <div class="queue-ticket">
+          CUSTOMER
+          <strong id="queueCount">01 IN PROGRESS</strong>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 01 CONCLUSION -->
+
+<section class="reveal" id="phaseOneReveal">
+
+  <div>
+
+    <div class="mono">01 / What just happened</div>
+
+    <h2 style="margin-top:35px">
+      Small delays<br>
+      become big<br>
+      <span>interruptions.</span>
+    </h2>
+
+  </div>
+
+  <div class="reveal-bottom">
+
+    <p id="phaseOneReflection">
+      One transaction needed your attention.
+      Then another customer arrived. The business kept moving,
+      but the unresolved payment kept demanding attention.
+    </p>
+
+    <button class="primary-btn" id="unlockPhaseTwo">
+      <span>Experience the difference</span>
+      <span>→</span>
+    </button>
+
+  </div>
+
+</section>
+
+<!-- PHASE 02 -->
+
+<section class="section dark" id="phaseTwo">
+
+  <div class="section-head">
+
+    <div class="phase-label mono">
+      <span class="phase-index">02 /</span>
+      <span>The difference</span>
+    </div>
+
+    <div class="phase-track">
+      <span class="track-segment active"></span>
+      <span class="track-segment active"></span>
+      <span class="track-segment"></span>
+    </div>
+
+  </div>
+
+  <div class="phase-two-layout">
+
+    <div class="phase-two-copy">
+
+      <div class="mono" style="color:var(--lime)">
+        Same business. Different flow.
+      </div>
+
+      <h2 class="phase-title" style="margin-top:25px">
+        It should<br>
+        only take<br>
+        a moment.
+      </h2>
+
+      <p class="section-intro">
+        You are back at the counter. Another customer is ready.
+        This time, complete the payment through GTLipa.
+      </p>
+
+      <div class="flow-list">
+
+        <div class="flow-item" id="flow1">
+          <span class="flow-icon">01</span>
+          <span>Customer scans the QR</span>
+        </div>
+
+        <div class="flow-item" id="flow2">
+          <span class="flow-icon">02</span>
+          <span>Customer completes payment</span>
+        </div>
+
+        <div class="flow-item" id="flow3">
+          <span class="flow-icon">03</span>
+          <span>Merchant receives notification</span>
+        </div>
+
+        <div class="flow-item" id="flow4">
+          <span class="flow-icon">04</span>
+          <span>Merchant confirms payment</span>
+        </div>
+
+        <div class="flow-item" id="flow5">
+          <span class="flow-icon">05</span>
+          <span>Order is completed</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="payment-terminal">
+
+      <div class="terminal-head mono">
+        <span>GTLipa / Checkout</span>
+        <span id="terminalStep">READY</span>
+      </div>
+
+      <div class="terminal-body">
+
+        <div class="mono muted">Amount to pay</div>
+
+        <div class="terminal-amount">25,000</div>
+
+        <div class="terminal-caption">
+          Tanzanian shillings · Order #004
+        </div>
+
+        <div class="qr-wrap">
+
+          <svg
+            class="qr-art"
+            viewBox="0 0 100 100"
+            fill="none"
+            aria-label="Decorative QR code illustration"
+          >
+
+            <rect width="100" height="100" fill="#f3f0e8"/>
+
+            <g fill="#171815">
+
+              <path d="M5 5h30v30H5zM11 11v18h18V11zM16 16h8v8h-8z"/>
+
+              <path d="M65 5h30v30H65zM71 11v18h18V11zM76 16h8v8h-8z"/>
+
+              <path d="M5 65h30v30H5zM11 71v18h18V71zM16 76h8v8h-8z"/>
+
+              <path d="M42 5h7v7h-7zM51 5h7v7h-7zM42 15h7v7h-7zM53 18h6v6h-6z"/>
+
+              <path d="M40 31h8v8h-8zM51 31h8v8h-8zM40 42h8v8h-8zM53 42h6v6h-6z"/>
+
+              <path d="M65 42h8v8h-8zM76 42h8v8h-8zM87 42h8v8h-8z"/>
+
+              <path d="M42 54h7v7h-7zM53 54h7v7h-7zM65 54h7v7h-7zM76 54h7v7h-7z"/>
+
+              <path d="M42 65h8v8h-8zM54 68h7v7h-7zM65 65h8v8h-8zM82 65h7v7h-7z"/>
+
+              <path d="M42 78h7v7h-7zM53 82h7v7h-7zM65 78h7v7h-7zM76 87h8v8h-8zM87 78h8v8h-8z"/>
+
+            </g>
+
+          </svg>
+
+        </div>
+
+        <div class="terminal-status" id="terminalStatus">
+          <strong>Ready for payment.</strong><br>
+          This is a simulated checkout experience.
+        </div>
+
+        <div class="terminal-actions">
+
+          <button class="primary-btn" id="terminalAction">
+            <span>Scan and pay</span>
+            <span>→</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHASE 03 / PRODUCT REVEAL -->
+
+<section class="product-reveal" id="phaseThree">
+
+  <div>
+
+    <div class="mono">03 / Meet the product</div>
+
+    <h2>
+      Get paid<br>
+      <em>without</em><br>
+      the friction.
+    </h2>
+
+    <p>
+      GTLipa gives customers a way to pay your business digitally,
+      while helping you receive and confirm payments at the counter.
+    </p>
+
+  </div>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+
+      <div class="product-number">01 / PAYMENT</div>
+
+      <div class="product-icon">▦</div>
+
+      <h3>GTLipa QR</h3>
+
+      <p>
+        Customers scan your business QR code to initiate payment.
+      </p>
+
+    </div>
+
+    <div class="product-card">
+
+      <div class="product-number">02 / PAYMENT</div>
+
+      <div class="product-icon">#</div>
+
+      <h3>GTLipa Number</h3>
+
+      <p>
+        Customers can pay using your GTLipa Number.
+      </p>
+
+    </div>
+
+    <div class="product-card">
+
+      <div class="product-number">03 / CONFIRMATION</div>
+
+      <div class="product-icon">✓</div>
+
+      <h3>Receive. Confirm. Continue.</h3>
+
+      <p>
+        Receive a payment notification and confirm the payment
+        before releasing goods or services.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- END -->
+
+<section class="final-screen">
+
+  <div>
+
+    <div class="mono">The business keeps moving</div>
+
+    <h2>
+      Make the next<br>
+      moment <em>count.</em>
+    </h2>
+
+  </div>
+
+  <div class="final-bottom">
+
+    <p>
+      Discover GTLipa and explore how your business can receive
+      digital payments.
+    </p>
+
+    <button class="primary-btn" id="restart">
+      <span>Experience again</span>
+      <span>↗</span>
+    </button>
+
+  </div>
+
+</section>
+
+<footer class="footer mono">
+  <span>GTLipa</span>
+  <span>Interactive campaign concept</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
